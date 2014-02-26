@@ -36,6 +36,16 @@ function! diffbuf#diffbuf()
   call s:diffbuf()
 endfunction
 
+function! diffbuf#echobuf()
+  if exists('s:diffbuf1')
+    echom 'buffer' s:diffbuf1
+  elseif exists('s:diffbuf2')
+    echom 'buffer' s:diffbuf2
+  else
+    echom 'no buffer added'
+  endif
+endfunction
+
 "}}}
 
 " Private {{{1

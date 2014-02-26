@@ -31,7 +31,8 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-command! -nargs=0 DiffBuf  call diffbuf#diffbuf()
+command! -nargs=0 DiffBuf       call diffbuf#diffbuf()
+command! -nargs=0 DiffBufEcho   call diffbuf#echobuf()
 
 
 let &cpo = s:save_cpo

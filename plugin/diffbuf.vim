@@ -32,6 +32,7 @@ set cpo&vim
 
 
 command! -nargs=0 DiffBuf       call diffbuf#diffbuf()
+command! -nargs=0 DiffBufClear  call diffbuf#clearbuf()
 command! -nargs=0 DiffBufEcho   call diffbuf#echobuf()
 
 

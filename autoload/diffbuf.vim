@@ -36,6 +36,15 @@ function! diffbuf#diffbuf()
   call s:diffbuf()
 endfunction
 
+function! diffbuf#clearbuf()
+  if exists('s:diffbuf1')
+    unlet s:diffbuf1
+  endif
+  if exists('s:diffbuf2')
+    unlet s:diffbuf2
+  endif
+endfunction
+
 function! diffbuf#echobuf()
   if exists('s:diffbuf1')
     echom 'buffer' s:diffbuf1

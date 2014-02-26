@@ -64,13 +64,13 @@ function! s:diffbuf()
   endif
 
   if !bufexists(s:diffbuf1)
-    call s:echo_error('buffer(num is ' . s:diffbuf1 . ') is not existed!')
+    call s:echo_error('buffer' s:diffbuf1 'does not exist')
     unlet s:diffbuf1
     return
   endif
 
   if !bufexists(s:diffbuf2)
-    call s:echo_error('buffer(num is ' . s:diffbuf2 . ') is not existed!')
+    call s:echo_error('buffer' s:diffbuf2 'does not exist')
     unlet s:diffbuf2
     return
   endif

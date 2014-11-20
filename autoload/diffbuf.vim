@@ -63,6 +63,12 @@ function! s:diffbuf()
     return
   endif
 
+  if s:diffbuf1 == s:diffbuf2
+    call s:echo_error('buffer' s:diffbuf1 'is already specified')
+    let s:diffbuf2 = 0
+    return
+  endif
+
   if !bufexists(s:diffbuf1)
     call s:echo_error('buffer' s:diffbuf1 'does not exist')
     unlet s:diffbuf1
